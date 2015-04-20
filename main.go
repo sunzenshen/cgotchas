@@ -1,13 +1,9 @@
 package main
 
-import (
-	"fmt"
-	"github.com/sunzenshen/cgotchas/mpc"
-)
+import "github.com/sunzenshen/cgotchas/mpc"
 
 func main() {
 	var number mpc.Parser
-	fmt.Println(number)
 	number = mpc.New("number")
-	fmt.Println(number)
+	mpc.Cleanup(number)
 }

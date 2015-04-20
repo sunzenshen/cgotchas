@@ -2,7 +2,7 @@ package mpc
 
 /*
 #cgo LDFLAGS: -lm
-#include "mpc.h"
+#include "mpc_interface.h"
 */
 import "C"
 
@@ -16,4 +16,8 @@ func New(name string) Parser {
 	cName := C.CString(name)
 	defer C.free(unsafe.Pointer(cName))
 	return C.mpc_new(cName)
+}
+
+func Cleanup(p Parser) {
+	C.mpc_cleanup_if(p)
 }
