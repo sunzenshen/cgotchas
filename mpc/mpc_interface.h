@@ -3,8 +3,15 @@
 
 #include "mpc.h"
 
-inline void mpc_cleanup_if(mpc_parser_t* parser) {
-  mpc_cleanup(1, parser);
+inline void mpc_cleanup_if
+(
+  mpc_parser_t* p1,
+  mpc_parser_t* p2,
+  mpc_parser_t* p3,
+  mpc_parser_t* p4
+)
+{
+  mpc_cleanup(4, p1, p2, p3, p4);
 }
 
 #endif

@@ -18,6 +18,6 @@ func New(name string) Parser {
 	return C.mpc_new(cName)
 }
 
-func Cleanup(p Parser) {
-	C.mpc_cleanup_if(p)
+func Cleanup(p1, p2, p3, p4 Parser) {
+	C.mpc_cleanup_if(p1, p2, p3, p4)
 }
